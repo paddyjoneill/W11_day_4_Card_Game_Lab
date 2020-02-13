@@ -29,6 +29,6 @@ public class DeckTest {
     public void populate_full_deck(){
         deck.populateDeck();
         assertEquals(52, deck.getCards().size());
-
     }
+
 }

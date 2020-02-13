@@ -1,10 +1,16 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
     private ArrayList<Card> cards;
 
     public Deck(){
         cards = new ArrayList<Card>();
+    }
+
+    public Deck(ArrayList<Card> cards){
+        this.cards = cards;
     }
 
     public ArrayList<Card> getCards() {
@@ -25,4 +31,13 @@ public class Deck {
             }
         }
     }
+
+    public void shuffleDeck(){
+        Collections.shuffle(this.cards);
+    }
+
+//    public Card dealCard(){
+//
+//    }
+
 }
