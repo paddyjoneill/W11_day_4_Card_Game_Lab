@@ -29,4 +29,10 @@ public class PlayerTest {
         player.takeACard(card);
         assertEquals(card, player.giveBackCard());
     }
+
+    @Test
+    public void can_get_card_value_back(){
+        player.takeACard(card);
+        assertEquals(3, player.getCardValue());
+    }
 }

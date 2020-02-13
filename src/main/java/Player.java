@@ -20,4 +20,8 @@ public class Player {
     public Card getCard() {
         return this.card;
     }
+
+    public int getCardValue(){
+        return this.card.getFaceValue();
+    }
 }
