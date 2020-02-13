@@ -6,12 +6,10 @@ import static org.junit.Assert.assertEquals;
 public class DeckTest {
 
     private Deck deck;
-    private Card card;
 
     @Before
     public void before(){
         deck = new Deck();
-        card = new Card();
     }
 
     @Test
