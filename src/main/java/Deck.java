@@ -36,9 +36,22 @@ public class Deck {
         Collections.shuffle(this.cards);
     }
 
+    public void createAndShuffleDeck(){
+        this.populateDeck();
+        this.shuffleDeck();
+    }
+
     public Card dealCard(){
         Card dealtCard = this.cards.remove(0);
         return dealtCard;
+    }
+
+    public int cardCount(){
+        return this.cards.size();
+    }
+
+    public void returnCards(ArrayList<Card> returnedCards){
+        this.cards.addAll(returnedCards);
     }
 
 }
