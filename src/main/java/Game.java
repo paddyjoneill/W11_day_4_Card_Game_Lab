@@ -29,22 +29,20 @@ public class Game {
 
     public String decideResult(Player player) {
         if (!player.isBust()){
-            if (dealer.getHandValue() > player.getHandValue()){
-                return "dealer";
-            } else if (dealer.getHandValue() == player.getHandValue()){
-                return "draw";
-            } else {
-                return "player";
+            if(!dealer.isBust()){
+                if (dealer.getHandValue() > player.getHandValue()){
+                    return "dealer wins";
+                } else if (dealer.getHandValue() == player.getHandValue()){
+                    return "draw";
+                } else {
+                    return "player wins";
+                }
+            } else  {
+                return "player wins";
             }
+        } else  {
+            return "player loses";
         }
 
-
-        if (dealer.getHandValue() > player.getHandValue()){
-            return "dealer";
-        } else if (dealer.getHandValue() == player.getHandValue()){
-            return "draw";
-        } else {
-            return "player";
-        }
     }
 }

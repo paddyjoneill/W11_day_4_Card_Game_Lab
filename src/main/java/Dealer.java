@@ -56,6 +56,12 @@ public class Dealer {
     }
 
     public void hitOrStick() {
+        for (Card card : hand) {
+            String yourCards = String.format("The dealer has the %s of %s", card.getFaceValue(), card.getSuit());
+            System.out.println(yourCards);
+        }
+        String cardTotal = String.format("The dealer currently has %s", this.getHandValue());
+        System.out.println(cardTotal);
         if ( this.getHandValue() < 16 ){
             System.out.println("The dealer has less than 16 so has to hit");
             this.takeACard(this.dealACard());

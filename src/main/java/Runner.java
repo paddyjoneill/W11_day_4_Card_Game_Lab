@@ -21,5 +21,10 @@ public class Runner {
 
         dealer.hitOrStick();
 
+        for (Player player : game.getPlayers()) {
+            String result = game.decideResult(player);
+            System.out.println(result);
+        }
+
     }
 }
